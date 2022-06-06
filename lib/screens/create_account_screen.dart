@@ -22,7 +22,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     }
     bool isValid = EmailValidator.validate(_emailController.text);
     if (!isValid) {
-      return "This email is not valid.";
+      return "This email not is valid.";
     }
   }
 

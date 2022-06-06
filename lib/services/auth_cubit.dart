@@ -15,7 +15,9 @@ class AuthCubit extends Cubit<AuthState> {
         _authRepository.onAuthStateChanged.listen(_authStateChanged);
   }
 
-  //Funcion para emitir el estado
+  Future<void> reset() async => emit(AuthInitialState());
+
+  //Funcion para emitir el usuario
   void _authStateChanged(AuthUser? user) =>
       {user == null ? emit(AuthSignedOut()) : emit(AuthSignedIn(user))};
 

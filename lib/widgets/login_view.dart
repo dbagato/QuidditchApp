@@ -64,8 +64,10 @@ class LoginView extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 OutlinedButton(
-                    onPressed: () =>
-                        Navigator.pushNamed(context, AppRoutes.createAccount),
+                    onPressed: () {
+                      context.read<AuthCubit>().reset();
+                      Navigator.pushNamed(context, AppRoutes.createAccount);
+                    },
                     child: const Text("Create Account")),
               ],
             ),
