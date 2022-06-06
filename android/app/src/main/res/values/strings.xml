@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">QuidditchApp</string>
+<string name="facebook_app_id">1059684701312830</string>
+<string name="fb_login_protocol_scheme">fb1059684701312830</string>
+<string name="facebook_client_token">0a760c26a69ef8055f83b20d4fa4e095</string>
+</resources>

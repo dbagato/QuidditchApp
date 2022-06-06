@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "80733465678",
+    "project_id": "quidditchapp",
+    "storage_bucket": "quidditchapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80733465678:android:5faeed58524c465b3d271f",
+        "android_client_info": {
+          "package_name": "com.dieseg.quidditch_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80733465678-734guvoburs1aduao9ps3qom9jflneav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4o4DNaJhWNbVHP5kIsMGgTFzSjCkcL2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80733465678-734guvoburs1aduao9ps3qom9jflneav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
