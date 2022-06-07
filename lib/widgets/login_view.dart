@@ -60,7 +60,10 @@ class LoginView extends StatelessWidget {
                   iconButton: Icons.mail,
                   colorButton: Colors.grey,
                   colorText: Colors.white,
-                  onTap: () {},
+                  onTap: () {
+                    context.read<AuthCubit>().reset();
+                    Navigator.pushNamed(context, AppRoutes.loginAccount);
+                  },
                 ),
                 const SizedBox(height: 50),
                 OutlinedButton(

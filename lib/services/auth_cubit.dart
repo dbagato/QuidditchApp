@@ -27,6 +27,8 @@ class AuthCubit extends Cubit<AuthState> {
 
   void createUserWithEmailPwd(String email, String pwd) =>
       _signIn(_authRepository.createUserWithEmailPwd(email, pwd));
+  void signInUserWithEmailPwd(String email, String pwd) =>
+      _signIn(_authRepository.singInWithEmailPwd(email, pwd));
   //Funcion para iniciar sesion
   void _signIn(Future<AuthUser?> auxUser) async {
     try {

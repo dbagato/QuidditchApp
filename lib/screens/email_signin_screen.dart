@@ -2,21 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quidditch_app/services/auth_cubit.dart';
 import 'package:email_validator/email_validator.dart';
-import 'package:quidditch_app/theme/app_theme_global.dart';
 import 'package:quidditch_app/widgets/widgets.dart';
 
-class CreateAccountScreen extends StatefulWidget {
-  CreateAccountScreen({Key? key}) : super(key: key);
-  static Widget create(BuildContext context) => CreateAccountScreen();
+class EmailSigninScreen extends StatefulWidget {
+  EmailSigninScreen({Key? key}) : super(key: key);
+  static Widget create(BuildContext context) => EmailSigninScreen();
   @override
-  State<CreateAccountScreen> createState() => _CreateAccountScreenState();
+  State<EmailSigninScreen> createState() => _EmailSigninScreenState();
 }
 
-class _CreateAccountScreenState extends State<CreateAccountScreen> {
+class _EmailSigninScreenState extends State<EmailSigninScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _pwdController = TextEditingController();
-  final _repeatPwdController = TextEditingController();
 
   String? emailValidator(String? value) {
     if (value == null || value.isEmpty) {
@@ -32,12 +30,6 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     if (value == null || value.isEmpty) {
       return "This is a required field.";
     }
-    if (value.length < 6) {
-      return "Password should be at least 6 letters";
-    }
-    if (_pwdController.text != _repeatPwdController.text) {
-      return "Password do not match";
-    }
     return null;
   }
 
@@ -45,7 +37,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Create Account"),
+        title: const Text("Sing In Account"),
       ),
       body: BlocBuilder<AuthCubit, AuthState>(
         builder: (_, state) {
@@ -82,26 +74,17 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                     style: Theme.of(context).primaryTextTheme.bodyText2,
                   ),
                   const SizedBox(height: 10),
-                  TextFormField(
-                    controller: _repeatPwdController,
-                    decoration: const InputDecoration(
-                      labelText: "Repeat your Password...",
-                    ),
-                    validator: pwdValidator,
-                    style: Theme.of(context).primaryTextTheme.bodyText2,
-                  ),
-                  const SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.all(30),
                     child: Center(
                       child: ButtonLogin(
-                        textButton: "Create",
-                        iconButton: Icons.create,
+                        textButton: "Login",
+                        iconButton: Icons.login,
                         colorButton: Theme.of(context).primaryColor,
                         colorText: Colors.white,
                         onTap: () {
                           if (_formKey.currentState?.validate() == true) {
-                            context.read<AuthCubit>().createUserWithEmailPwd(
+                            context.read<AuthCubit>().signInUserWithEmailPwd(
                                 _emailController.text, _pwdController.text);
                           }
                         },
