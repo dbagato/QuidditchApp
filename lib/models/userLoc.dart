@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class User extends Equatable {
+class UserLoc extends Equatable {
   final String id;
   final String name;
   final String lastName;
@@ -10,7 +10,7 @@ class User extends Equatable {
   final List<String>? positions;
   final List<String>? arbitrageTitles;
 
-  User(this.id, this.name, this.lastName, this.age, this.gender, this.image,
+  UserLoc(this.id, this.name, this.lastName, this.age, this.gender, this.image,
       this.positions, this.arbitrageTitles);
 
   @override
@@ -32,7 +32,7 @@ class User extends Equatable {
     };
   }
 
-  User.fromFirebaseMap(Map<String, Object?> data)
+  UserLoc.fromFirebaseMap(Map<String, Object?> data)
       : id = data['id'] as String,
         name = data['name'] as String,
         lastName = data['lastName'] as String,
