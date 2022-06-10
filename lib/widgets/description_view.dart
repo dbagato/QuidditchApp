@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 class DescriptionView extends StatelessWidget {
   final String textView;
   final String imagePath;
-
+  final double heightImage;
+  final double widthImage;
   const DescriptionView(
-      {Key? key, required this.textView, required this.imagePath})
+      {Key? key,
+      required this.textView,
+      required this.imagePath,
+      required this.heightImage,
+      required this.widthImage})
       : super(key: key);
 
   @override
@@ -16,8 +21,8 @@ class DescriptionView extends StatelessWidget {
         children: [
           Image.asset(
             imagePath,
-            height: 200,
-            width: 200,
+            height: heightImage,
+            width: widthImage,
           ),
           Expanded(
             child: Container(
