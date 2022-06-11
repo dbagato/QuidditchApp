@@ -4,7 +4,7 @@ import 'package:quidditch_app/screens/profile_screen.dart';
 
 class UsersScreenView extends StatelessWidget {
   final UserLoc userLoc;
-  const UsersScreenView({Key? key, required this.userLoc}) : super(key: key);
+  UsersScreenView({Key? key, required this.userLoc}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,23 +14,22 @@ class UsersScreenView extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             ListTile(
+              leading: obtenerImagen(userLoc.image),
               title: Text("${userLoc.name} ${userLoc.lastName}"),
-              subtitle: Text('Age: ${userLoc.age}, Gender: ${userLoc.gender}'),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                const SizedBox(width: 8),
-                TextButton(
-                  child: const Text('Delete User'),
-                  onPressed: () {},
-                ),
-                const SizedBox(width: 8),
-              ],
+              subtitle: Text(
+                  'Age: ${userLoc.age}, Gender: ${userLoc.gender}, Rol: ${userLoc.rol}, Positions: ${userLoc.positions}, Title Arbitrage: ${userLoc.arbitrageTitles}'),
             ),
           ],
         ),
       ),
     );
+  }
+
+  Image obtenerImagen(String? image) {
+    if (image == "") {
+      return Image.asset("assets/images/quidditchAppLogo.jpeg");
+    } else {
+      return Image.network("${image}");
+    }
   }
 }

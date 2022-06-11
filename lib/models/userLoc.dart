@@ -19,8 +19,8 @@ class UserLoc extends Equatable {
 
   Map<String, Object?> toFirebaseMap(
       {String? newImage,
-      List<String>? newPositions,
-      List<String>? newArbitrageTitles}) {
+      List<dynamic>? newPositions,
+      List<dynamic>? newArbitrageTitles}) {
     return <String, Object?>{
       'id': id,
       'name': name,

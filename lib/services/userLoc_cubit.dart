@@ -34,8 +34,8 @@ class UserLocCubit extends Cubit<UserLocState> {
       int age,
       String gender,
       String rol,
-      List<String>? positions,
-      List<String>? arbitrageTitles) async {
+      List<dynamic>? positions,
+      List<dynamic>? arbitrageTitles) async {
     _user = UserLoc(id, name, lastName, age, gender, rol, _user!.image,
         positions, arbitrageTitles);
     emit(UserLocReadyState(_user, _pickedImage, isSaving: true));

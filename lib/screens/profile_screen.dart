@@ -43,7 +43,6 @@ class _UserLocSection extends StatefulWidget {
 
 class _UserLocSectionState extends State<_UserLocSection> {
   final _formKey = GlobalKey<FormBuilderState>();
-  var genderOptions = ['Male', 'Female', 'Non Binary', 'Fluid'];
   final piker = ImagePicker();
   @override
   Widget build(BuildContext context) {
@@ -110,21 +109,21 @@ class _UserLocSectionState extends State<_UserLocSection> {
                       children: [
                         FormBuilderTextField(
                           name: "name",
-                          initialValue: widget.user!.name,
+                          initialValue: widget.user?.name,
                           decoration: InputDecoration(labelText: "Name"),
                           validator: FormBuilderValidators.required(
                               errorText: "This File is Required"),
                         ),
                         FormBuilderTextField(
                           name: "lastName",
-                          initialValue: widget.user!.lastName,
+                          initialValue: widget.user?.lastName,
                           decoration: InputDecoration(labelText: "Last Name"),
                           validator: FormBuilderValidators.required(
                               errorText: "This File is Required"),
                         ),
                         FormBuilderTextField(
                           name: "age",
-                          initialValue: widget.user!.age.toString(),
+                          initialValue: widget.user?.age.toString(),
                           decoration: InputDecoration(labelText: "Age"),
                           keyboardType: TextInputType.number,
                           validator: FormBuilderValidators.compose([
@@ -137,30 +136,50 @@ class _UserLocSectionState extends State<_UserLocSection> {
                         ),
                         FormBuilderDropdown(
                           name: 'gender',
-                          initialValue: widget.user!.gender,
+                          initialValue: widget.user?.gender,
                           decoration: const InputDecoration(
                             labelText: 'Gender',
                           ),
                           allowClear: true,
                           hint: const Text('Select Gender'),
-                          items: genderOptions
-                              .map((gender) => DropdownMenuItem(
-                                    value: gender,
-                                    child: Text('$gender'),
-                                  ))
-                              .toList(),
+                          items: const [
+                            DropdownMenuItem(
+                              value: '',
+                              child: Text('Select Gender'),
+                            ),
+                            DropdownMenuItem(
+                              value: 'Male',
+                              child: Text('Male'),
+                            ),
+                            DropdownMenuItem(
+                              value: 'Female',
+                              child: Text('Female'),
+                            ),
+                            DropdownMenuItem(
+                              value: 'Non Binary',
+                              child: Text('Non Binary'),
+                            ),
+                            DropdownMenuItem(
+                              value: 'Fluid',
+                              child: Text('Fluid'),
+                            ),
+                          ],
                           validator: FormBuilderValidators.required(
                               errorText: "This File is Required"),
                         ),
                         FormBuilderDropdown(
                           name: 'rol',
-                          initialValue: widget.user!.rol,
+                          initialValue: widget.user?.rol,
                           decoration: const InputDecoration(
                             labelText: 'Rol',
                           ),
                           allowClear: true,
                           hint: const Text('Select Rol'),
                           items: const [
+                            DropdownMenuItem(
+                              value: '',
+                              child: Text('Select Rol'),
+                            ),
                             DropdownMenuItem(
                               value: "Team",
                               child: Text('Team'),
@@ -175,7 +194,7 @@ class _UserLocSectionState extends State<_UserLocSection> {
                         ),
                         FormBuilderCheckboxGroup<dynamic>(
                           name: 'positions',
-                          initialValue: widget.user!.positions,
+                          initialValue: widget.user?.positions,
                           decoration: const InputDecoration(
                             labelText: 'Positions Player',
                           ),
@@ -188,7 +207,7 @@ class _UserLocSectionState extends State<_UserLocSection> {
                         ),
                         FormBuilderCheckboxGroup<dynamic>(
                           name: 'arbitrage',
-                          initialValue: widget.user!.arbitrageTitles,
+                          initialValue: widget.user?.arbitrageTitles,
                           decoration: const InputDecoration(
                             labelText: 'Arbitration Titles',
                           ),
