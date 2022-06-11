@@ -11,6 +11,9 @@ class UserLocRepository extends UserLocRepositoryBase {
   Future<UserLoc?> getUserLoc() => provider.getUserLoc();
 
   @override
+  Future<List<UserLoc?>?> getAllUserLoc() => provider.getAllUserLoc();
+
+  @override
   Future<void> saveUserLoc(UserLoc user, File? image) =>
       provider.saveUserLoc(user, image);
 }

@@ -22,6 +22,14 @@ class FirebaseProvider {
     return null;
   }
 
+  Future<List<UserLoc>> getAllUserLoc() async {
+    final users = await firestore.collection('users/').snapshots().map(
+        (snapshot) => snapshot.docs
+            .map((doc) => UserLoc.fromFirebaseMap(doc.data()))
+            .toList());
+    return users.elementAt(0);
+  }
+
   Future<void> saveUserLoc(UserLoc user, File? image) async {
     final ref = firestore.doc("users/${currentUser.uid}");
     if (image == null) {

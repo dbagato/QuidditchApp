@@ -10,8 +10,6 @@ class UserLocCubit extends Cubit<UserLocState> {
 
   File? _pickedImage;
   UserLoc? _user;
-  List<String>? _pickPositions;
-  List<String>? _pickArbitrageTitles;
 
   UserLocCubit(this._userLocRepository) : super(UserLocLoadingState());
 
