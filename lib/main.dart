@@ -47,7 +47,6 @@ class MyApp extends StatelessWidget {
       navigatorKey: _navigatorKey,
       onGenerateRoute: AppRoutes.routes,
       theme: AppThemeGlobal.lightTheme,
-      darkTheme: AppThemeGlobal.darkTheme,
     );
   }
 }
