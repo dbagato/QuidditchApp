@@ -55,8 +55,6 @@ class UserLocCubit extends Cubit<UserLocState> {
     emit(UserLocReadyState(
         _user, _pickedImage, _pickPositions, _pickArbitrageTitles,
         isSaving: true));
-    //TODO quitar el delayed
-    await Future.delayed(const Duration(seconds: 3));
     await _userLocRepository.saveUserLoc(_user!, _pickedImage);
     emit(UserLocReadyState(
         _user, _pickedImage, _pickPositions, _pickArbitrageTitles,
@@ -93,5 +91,5 @@ class UserLocReadyState extends UserLocState {
 
   @override
   List<Object?> get props =>
-      [user, pickedImage?.path, pickPositions, pickArbitrageTitles];
+      [user, pickedImage?.path, pickPositions, pickArbitrageTitles, isSaving];
 }

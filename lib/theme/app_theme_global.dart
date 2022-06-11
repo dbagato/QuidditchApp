@@ -37,7 +37,7 @@ class AppThemeGlobal {
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(primary: primaryColor),
     ),
-    textTheme: const TextTheme(
+    primaryTextTheme: const TextTheme(
       bodyText1: TextStyle(
           fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white),
       bodyText2: TextStyle(
