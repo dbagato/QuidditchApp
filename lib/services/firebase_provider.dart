@@ -17,7 +17,7 @@ class FirebaseProvider {
   }
 
   Future<UserLoc?> getUserLoc() async {
-    final snapshot = await firestore.doc('user/${currentUser.uid}').get();
+    final snapshot = await firestore.doc('users/${currentUser.uid}').get();
     if (snapshot.exists) return UserLoc.fromFirebaseMap(snapshot.data()!);
     return null;
   }

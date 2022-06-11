@@ -20,11 +20,10 @@ class ProfileScreen extends StatelessWidget {
           return _UserLocSection(
             user: state.user,
             pikedImage: state.pickedImage,
-            pikedPositions: state.pickPositions,
-            pikedArbitrageTitles: state.pickArbitrageTitles,
             isSaving: state.isSaving,
           );
         }
+
         return const Center(child: CircularProgressIndicator());
       },
     ));
@@ -34,16 +33,9 @@ class ProfileScreen extends StatelessWidget {
 class _UserLocSection extends StatefulWidget {
   final UserLoc? user;
   final File? pikedImage;
-  final List<String>? pikedPositions;
-  final List<String>? pikedArbitrageTitles;
   final bool isSaving;
 
-  const _UserLocSection(
-      {this.user,
-      this.pikedImage,
-      this.pikedPositions,
-      this.pikedArbitrageTitles,
-      this.isSaving = false});
+  const _UserLocSection({this.user, this.pikedImage, this.isSaving = false});
 
   @override
   State<StatefulWidget> createState() => _UserLocSectionState();
@@ -118,19 +110,23 @@ class _UserLocSectionState extends State<_UserLocSection> {
                       children: [
                         FormBuilderTextField(
                           name: "name",
+                          initialValue: widget.user!.name,
                           decoration: InputDecoration(labelText: "Name"),
                           validator: FormBuilderValidators.required(
                               errorText: "This File is Required"),
                         ),
                         FormBuilderTextField(
                           name: "lastName",
+                          initialValue: widget.user!.lastName,
                           decoration: InputDecoration(labelText: "Last Name"),
                           validator: FormBuilderValidators.required(
                               errorText: "This File is Required"),
                         ),
                         FormBuilderTextField(
                           name: "age",
+                          initialValue: widget.user!.age.toString(),
                           decoration: InputDecoration(labelText: "Age"),
+                          keyboardType: TextInputType.number,
                           validator: FormBuilderValidators.compose([
                             FormBuilderValidators.required(
                                 errorText: "This File is Required"),
@@ -141,6 +137,7 @@ class _UserLocSectionState extends State<_UserLocSection> {
                         ),
                         FormBuilderDropdown(
                           name: 'gender',
+                          initialValue: widget.user!.gender,
                           decoration: const InputDecoration(
                             labelText: 'Gender',
                           ),
@@ -157,6 +154,7 @@ class _UserLocSectionState extends State<_UserLocSection> {
                         ),
                         FormBuilderDropdown(
                           name: 'rol',
+                          initialValue: widget.user!.rol,
                           decoration: const InputDecoration(
                             labelText: 'Rol',
                           ),
@@ -175,8 +173,9 @@ class _UserLocSectionState extends State<_UserLocSection> {
                           validator: FormBuilderValidators.required(
                               errorText: "This File is Required"),
                         ),
-                        FormBuilderCheckboxGroup<String>(
+                        FormBuilderCheckboxGroup<dynamic>(
                           name: 'positions',
+                          initialValue: widget.user!.positions,
                           decoration: const InputDecoration(
                             labelText: 'Positions Player',
                           ),
@@ -187,8 +186,9 @@ class _UserLocSectionState extends State<_UserLocSection> {
                             FormBuilderFieldOption(value: "Seekers"),
                           ],
                         ),
-                        FormBuilderCheckboxGroup<String>(
+                        FormBuilderCheckboxGroup<dynamic>(
                           name: 'arbitrage',
+                          initialValue: widget.user!.arbitrageTitles,
                           decoration: const InputDecoration(
                             labelText: 'Arbitration Titles',
                           ),

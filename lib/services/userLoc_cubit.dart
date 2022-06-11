@@ -20,25 +20,13 @@ class UserLocCubit extends Cubit<UserLocState> {
     emit(UserLocReadyState.image(_user!, _pickedImage));
   }
 
-  void setPositions(List<String> positions) {
-    _pickPositions = positions;
-    emit(UserLocReadyState.pickPositions(_user!, _pickedImage, _pickPositions));
-  }
-
-  void setArbitrageTitles(List<String> arbitrageTitles) {
-    _pickArbitrageTitles = arbitrageTitles;
-    emit(UserLocReadyState.pickPositions(
-        _user!, _pickedImage, _pickArbitrageTitles));
-  }
-
   Future<void> getUserLoc() async {
     emit(UserLocLoadingState());
     _user = await _userLocRepository.getUserLoc();
     if (_user == null) {
       _user = UserLoc('', '', '', 0, '', '', '', [], []);
     }
-    emit(UserLocReadyState(
-        _user!, _pickedImage, _pickPositions, _pickArbitrageTitles));
+    emit(UserLocReadyState(_user!, _pickedImage));
   }
 
   Future<void> saveUserLoc(
@@ -52,13 +40,9 @@ class UserLocCubit extends Cubit<UserLocState> {
       List<String>? arbitrageTitles) async {
     _user = UserLoc(id, name, lastName, age, gender, rol, _user!.image,
         positions, arbitrageTitles);
-    emit(UserLocReadyState(
-        _user, _pickedImage, _pickPositions, _pickArbitrageTitles,
-        isSaving: true));
+    emit(UserLocReadyState(_user, _pickedImage, isSaving: true));
     await _userLocRepository.saveUserLoc(_user!, _pickedImage);
-    emit(UserLocReadyState(
-        _user, _pickedImage, _pickPositions, _pickArbitrageTitles,
-        isSaving: false));
+    emit(UserLocReadyState(_user, _pickedImage, isSaving: false));
   }
 }
 
@@ -72,24 +56,12 @@ class UserLocLoadingState extends UserLocState {}
 class UserLocReadyState extends UserLocState {
   final UserLoc? user;
   final File? pickedImage;
-  List<String>? pickPositions = [];
-  List<String>? pickArbitrageTitles = [];
   final bool isSaving;
 
-  UserLocReadyState(
-      this.user, this.pickedImage, this.pickPositions, this.pickArbitrageTitles,
-      {this.isSaving = false});
+  UserLocReadyState(this.user, this.pickedImage, {this.isSaving = false});
 
   UserLocReadyState.image(this.user, this.pickedImage, {this.isSaving = false});
 
-  UserLocReadyState.pickPositions(
-      this.user, this.pickedImage, this.pickPositions,
-      {this.isSaving = false});
-  UserLocReadyState.pickArbitrageTitles(
-      this.user, this.pickedImage, this.pickArbitrageTitles,
-      {this.isSaving = false});
-
   @override
-  List<Object?> get props =>
-      [user, pickedImage?.path, pickPositions, pickArbitrageTitles, isSaving];
+  List<Object?> get props => [user, pickedImage?.path, isSaving];
 }

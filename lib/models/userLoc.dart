@@ -8,8 +8,8 @@ class UserLoc extends Equatable {
   final String gender;
   final String rol;
   final String? image;
-  final List<String>? positions;
-  final List<String>? arbitrageTitles;
+  final List<dynamic>? positions;
+  final List<dynamic>? arbitrageTitles;
 
   UserLoc(this.id, this.name, this.lastName, this.age, this.gender, this.rol,
       this.image, this.positions, this.arbitrageTitles);
@@ -42,6 +42,6 @@ class UserLoc extends Equatable {
         gender = data['gender'] as String,
         rol = data['rol'] as String,
         image = data['image'] as String?,
-        positions = data['positions'] as List<String>?,
-        arbitrageTitles = data['arbitrageTitles'] as List<String>?;
+        positions = data['positions'] as List<dynamic>?,
+        arbitrageTitles = data['arbitrageTitles'] as List<dynamic>?;
 }
