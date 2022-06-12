@@ -1,6 +1,7 @@
 # quidditch_app
 
 A new Flutter project.
+Este proyecto esta creado para el Trabajo Final de Grado de Desarollo de Aplicaciones Multiplataforma
 
 ## Getting Started
 
