@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quidditch_app/services/auth_cubit.dart';
+import 'package:quadball_manager/services/auth_cubit.dart';
 import 'package:email_validator/email_validator.dart';
-import 'package:quidditch_app/theme/app_theme_global.dart';
-import 'package:quidditch_app/widgets/widgets.dart';
+import 'package:quadball_manager/theme/app_theme_global.dart';
+import 'package:quadball_manager/widgets/widgets.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   CreateAccountScreen({Key? key}) : super(key: key);

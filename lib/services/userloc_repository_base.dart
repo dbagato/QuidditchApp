@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:quidditch_app/models/models.dart';
+import 'package:quadball_manager/models/models.dart';
 
 abstract class UserLocRepositoryBase {
   Future<UserLoc?> getUserLoc();

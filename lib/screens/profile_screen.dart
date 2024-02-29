@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:quidditch_app/services/services.dart';
-import 'package:quidditch_app/models/models.dart';
+import 'package:quadball_manager/services/services.dart';
+import 'package:quadball_manager/models/models.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 
 class ProfileScreen extends StatelessWidget {

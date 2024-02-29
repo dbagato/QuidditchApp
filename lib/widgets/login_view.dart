@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quidditch_app/router/app_routes.dart';
-import 'package:quidditch_app/services/auth_cubit.dart';
-import 'package:quidditch_app/widgets/widgets.dart';
+import 'package:quadball_manager/router/app_routes.dart';
+import 'package:quadball_manager/services/auth_cubit.dart';
+import 'package:quadball_manager/widgets/widgets.dart';
 
 class LoginView extends StatelessWidget {
   final String text;

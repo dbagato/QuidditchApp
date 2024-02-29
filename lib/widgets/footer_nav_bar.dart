@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quidditch_app/theme/app_theme_global.dart';
+import 'package:quadball_manager/theme/app_theme_global.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:quidditch_app/screens/screens.dart';
+import 'package:quadball_manager/screens/screens.dart';
 
 class FooterNavBar extends StatefulWidget {
   FooterNavBar({Key? key}) : super(key: key);

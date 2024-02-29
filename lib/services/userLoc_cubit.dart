@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quidditch_app/models/models.dart';
-import 'package:quidditch_app/services/userloc_repository_base.dart';
+import 'package:quadball_manager/models/models.dart';
+import 'package:quadball_manager/services/userloc_repository_base.dart';
 
 class UserLocCubit extends Cubit<UserLocState> {
   final UserLocRepositoryBase _userLocRepository;

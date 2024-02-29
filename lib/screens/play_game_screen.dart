@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quidditch_app/widgets/widgets.dart';
+import 'package:quadball_manager/widgets/widgets.dart';
 
 class PlayGameScreen extends StatelessWidget {
   const PlayGameScreen({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:page_indicator/page_indicator.dart';
-import 'package:quidditch_app/widgets/widgets.dart';
+import 'package:quadball_manager/widgets/widgets.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);

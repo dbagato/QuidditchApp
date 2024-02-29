@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quidditch_app/services/auth_repository_base.dart';
+import 'package:quadball_manager/services/auth_repository_base.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   final AuthRepositoryBase _authRepository;

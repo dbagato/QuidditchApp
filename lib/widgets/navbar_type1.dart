@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quidditch_app/services/auth_cubit.dart';
+import 'package:quadball_manager/services/auth_cubit.dart';
 
 class NavBarType1 extends StatelessWidget with PreferredSizeWidget {
   const NavBarType1({Key? key}) : super(key: key);

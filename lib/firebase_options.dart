@@ -47,30 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD4Kk_fjmQJZlQY4E9zPKFgd28r_2CnTnw',
-    appId: '1:80733465678:web:5a675b17b138841a3d271f',
-    messagingSenderId: '80733465678',
-    projectId: 'quidditchapp',
-    authDomain: 'quidditchapp.firebaseapp.com',
-    storageBucket: 'quidditchapp.appspot.com',
-    measurementId: 'G-G7YQ3531FJ',
+    apiKey: 'AIzaSyAo5SBtfRTuo-On9_AnGGsddHwD5iGvLuQ',
+    appId: '1:655009320556:web:b65f066ee7f2f031805249',
+    messagingSenderId: '655009320556',
+    projectId: 'quadballmanager',
+    authDomain: 'quadballmanager.firebaseapp.com',
+    storageBucket: 'quadballmanager.appspot.com',
+    measurementId: 'G-VP8GH2N5LL',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD4o4DNaJhWNbVHP5kIsMGgTFzSjCkcL2o',
-    appId: '1:80733465678:android:5faeed58524c465b3d271f',
-    messagingSenderId: '80733465678',
-    projectId: 'quidditchapp',
-    storageBucket: 'quidditchapp.appspot.com',
+    apiKey: 'AIzaSyAzpB-mMPEKAI7iF86yIlJJqFLmR5nDiRs',
+    appId: '1:655009320556:android:42337a2e199f8a82805249',
+    messagingSenderId: '655009320556',
+    projectId: 'quadballmanager',
+    storageBucket: 'quadballmanager.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBa3FT-z5kfzjmGDukwhh1e0jScWbprlDg',
-    appId: '1:80733465678:ios:0754d4801271d9dc3d271f',
-    messagingSenderId: '80733465678',
-    projectId: 'quidditchapp',
-    storageBucket: 'quidditchapp.appspot.com',
-    iosClientId: '80733465678-r4poilanl91ehndkefi1c406bet2fc7q.apps.googleusercontent.com',
-    iosBundleId: 'com.example.quidditchApp',
+    apiKey: 'AIzaSyABAf2PYbK6D0xSzLYuyGNCiGNu1M3I8WY',
+    appId: '1:655009320556:ios:0c1ffcaed14548ce805249',
+    messagingSenderId: '655009320556',
+    projectId: 'quadballmanager',
+    storageBucket: 'quadballmanager.appspot.com',
+    iosBundleId: 'com.example.quadballManager',
   );
 }

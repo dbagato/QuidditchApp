@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quidditch_app/services/services.dart';
-import 'package:quidditch_app/router/app_routes.dart';
-import 'package:quidditch_app/theme/app_theme_global.dart';
+import 'package:quadball_manager/services/services.dart';
+import 'package:quadball_manager/router/app_routes.dart';
+import 'package:quadball_manager/theme/app_theme_global.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 

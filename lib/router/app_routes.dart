@@ -1,5 +1,5 @@
-import 'package:quidditch_app/screens/email_signin_screen.dart';
-import 'package:quidditch_app/screens/screens.dart';
+import 'package:quadball_manager/screens/email_signin_screen.dart';
+import 'package:quadball_manager/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {

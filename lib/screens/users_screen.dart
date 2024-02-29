@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quidditch_app/models/models.dart';
-import 'package:quidditch_app/services/firebase_provider.dart';
-import 'package:quidditch_app/widgets/widgets.dart';
+import 'package:quadball_manager/models/models.dart';
+import 'package:quadball_manager/services/firebase_provider.dart';
+import 'package:quadball_manager/widgets/widgets.dart';
 
 class UsersScreen extends StatelessWidget {
   FirebaseProvider firebaseProvider = FirebaseProvider();

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quidditch_app/services/userLoc_cubit.dart';
-import 'package:quidditch_app/services/userloc_repository.dart';
-import 'package:quidditch_app/widgets/widgets.dart';
+import 'package:quadball_manager/services/userLoc_cubit.dart';
+import 'package:quadball_manager/services/userloc_repository.dart';
+import 'package:quadball_manager/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

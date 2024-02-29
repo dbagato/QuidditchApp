@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quidditch_app/models/models.dart';
-import 'package:quidditch_app/screens/profile_screen.dart';
+import 'package:quadball_manager/models/models.dart';
+import 'package:quadball_manager/screens/profile_screen.dart';
 
 class UsersScreenView extends StatelessWidget {
   final UserLoc userLoc;

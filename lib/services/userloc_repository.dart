@@ -1,8 +1,8 @@
-import 'package:quidditch_app/models/models.dart';
-import 'package:quidditch_app/services/firebase_provider.dart';
+import 'package:quadball_manager/models/models.dart';
+import 'package:quadball_manager/services/firebase_provider.dart';
 import 'dart:io';
 
-import 'package:quidditch_app/services/userloc_repository_base.dart';
+import 'package:quadball_manager/services/userloc_repository_base.dart';
 
 class UserLocRepository extends UserLocRepositoryBase {
   final provider = FirebaseProvider();
