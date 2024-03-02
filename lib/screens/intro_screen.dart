@@ -6,12 +6,12 @@ import 'package:quadball_manager/widgets/widgets.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
-  static Widget create(BuildContext context) => IntroScreen();
+  static Widget create(BuildContext context) => const IntroScreen();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("QuidditchApp"),
+        title: const Text("QuadballManager"),
       ),
       body: Center(
         child: _IntroPage(),
@@ -24,6 +24,8 @@ class _IntroPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return PageIndicatorContainer(
+      length: 4,
+      indicatorSpace: 12,
       child: PageView(
         children: const [
           DescriptionView(
@@ -47,12 +49,10 @@ class _IntroPage extends HookWidget {
             widthImage: 300,
           ),
           LoginView(
-              text: "Registrate o Crea tu cuenta en QuidditchApp",
+              text: "Registrate o Crea tu cuenta en QuadballManager",
               imagePath: "assets/images/quidditchAppLogo.jpeg"),
         ],
       ),
-      length: 4,
-      indicatorSpace: 12,
     );
   }
 }

@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quadball_manager/services/auth_cubit.dart';
 import 'package:email_validator/email_validator.dart';
-import 'package:quadball_manager/theme/app_theme_global.dart';
 import 'package:quadball_manager/widgets/widgets.dart';
 
 class CreateAccountScreen extends StatefulWidget {
-  CreateAccountScreen({Key? key}) : super(key: key);
-  static Widget create(BuildContext context) => CreateAccountScreen();
+  const CreateAccountScreen({Key? key}) : super(key: key);
+  static Widget create(BuildContext context) => const CreateAccountScreen();
   @override
   State<CreateAccountScreen> createState() => _CreateAccountScreenState();
 }
@@ -26,6 +25,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     if (!isValid) {
       return "This email not is valid.";
     }
+    return null;
   }
 
   String? pwdValidator(String? value) {
@@ -70,7 +70,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       labelText: "Email...",
                     ),
                     validator: emailValidator,
-                    style: Theme.of(context).primaryTextTheme.bodyText2,
+                    style: Theme.of(context).primaryTextTheme.bodyMedium,
                   ),
                   const SizedBox(height: 10),
                   TextFormField(
@@ -79,7 +79,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       labelText: "Password...",
                     ),
                     validator: pwdValidator,
-                    style: Theme.of(context).primaryTextTheme.bodyText2,
+                    style: Theme.of(context).primaryTextTheme.bodyMedium,
                   ),
                   const SizedBox(height: 10),
                   TextFormField(
@@ -88,7 +88,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       labelText: "Repeat your Password...",
                     ),
                     validator: pwdValidator,
-                    style: Theme.of(context).primaryTextTheme.bodyText2,
+                    style: Theme.of(context).primaryTextTheme.bodyMedium,
                   ),
                   const SizedBox(height: 10),
                   Padding(

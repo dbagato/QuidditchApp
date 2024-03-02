@@ -21,9 +21,7 @@ class UserLocCubit extends Cubit<UserLocState> {
   Future<void> getUserLoc() async {
     emit(UserLocLoadingState());
     _user = await _userLocRepository.getUserLoc();
-    if (_user == null) {
-      _user = UserLoc('', '', '', 0, '', '', '', [], []);
-    }
+    _user ??= const UserLoc('', '', '', 0, '', '', '', [], []);
     emit(UserLocReadyState(_user!, _pickedImage));
   }
 

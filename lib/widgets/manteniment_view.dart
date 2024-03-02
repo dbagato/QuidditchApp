@@ -9,7 +9,7 @@ class MantenimentView extends StatelessWidget {
         child: Text(
           'This page is under maintenance, please wait for the administrators to correct this page...',
           textAlign: TextAlign.center,
-          style: Theme.of(context).primaryTextTheme.bodyText1,
+          style: Theme.of(context).primaryTextTheme.bodyLarge,
         ),
       ),
       backgroundColor: Theme.of(context).primaryColor,

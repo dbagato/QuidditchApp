@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_config/flutter_config.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -46,8 +47,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAo5SBtfRTuo-On9_AnGGsddHwD5iGvLuQ',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: FlutterConfig.get('WEB_API_KEY'),
     appId: '1:655009320556:web:b65f066ee7f2f031805249',
     messagingSenderId: '655009320556',
     projectId: 'quadballmanager',
@@ -56,16 +57,16 @@ class DefaultFirebaseOptions {
     measurementId: 'G-VP8GH2N5LL',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAzpB-mMPEKAI7iF86yIlJJqFLmR5nDiRs',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: FlutterConfig.get('ANDROID_API_KEY'),
     appId: '1:655009320556:android:42337a2e199f8a82805249',
     messagingSenderId: '655009320556',
     projectId: 'quadballmanager',
     storageBucket: 'quadballmanager.appspot.com',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyABAf2PYbK6D0xSzLYuyGNCiGNu1M3I8WY',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: FlutterConfig.get('IOS_API_KEY'),
     appId: '1:655009320556:ios:0c1ffcaed14548ce805249',
     messagingSenderId: '655009320556',
     projectId: 'quadballmanager',

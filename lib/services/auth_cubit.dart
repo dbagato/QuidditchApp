@@ -23,8 +23,6 @@ class AuthCubit extends Cubit<AuthState> {
 
   void singInWithGoogle() => _signIn(_authRepository.singInWithGoogle());
 
-  void singInWithFacebook() => _signIn(_authRepository.singInWithFacebook());
-
   void createUserWithEmailPwd(String email, String pwd) =>
       _signIn(_authRepository.createUserWithEmailPwd(email, pwd));
   void signInUserWithEmailPwd(String email, String pwd) =>

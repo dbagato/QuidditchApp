@@ -69,7 +69,7 @@ class _UserLocSectionState extends State<_UserLocSection> {
 
     return SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
             GestureDetector(
@@ -82,7 +82,7 @@ class _UserLocSectionState extends State<_UserLocSection> {
               },
               child: Center(
                 child: ClipOval(
-                  child: Container(
+                  child: SizedBox(
                     width: 150,
                     height: 150,
                     child: image,
@@ -110,21 +110,22 @@ class _UserLocSectionState extends State<_UserLocSection> {
                         FormBuilderTextField(
                           name: "name",
                           initialValue: widget.user?.name,
-                          decoration: InputDecoration(labelText: "Name"),
+                          decoration: const InputDecoration(labelText: "Name"),
                           validator: FormBuilderValidators.required(
                               errorText: "This File is Required"),
                         ),
                         FormBuilderTextField(
                           name: "lastName",
                           initialValue: widget.user?.lastName,
-                          decoration: InputDecoration(labelText: "Last Name"),
+                          decoration:
+                              const InputDecoration(labelText: "Last Name"),
                           validator: FormBuilderValidators.required(
                               errorText: "This File is Required"),
                         ),
                         FormBuilderTextField(
                           name: "age",
                           initialValue: widget.user?.age.toString(),
-                          decoration: InputDecoration(labelText: "Age"),
+                          decoration: const InputDecoration(labelText: "Age"),
                           keyboardType: TextInputType.number,
                           validator: FormBuilderValidators.compose([
                             FormBuilderValidators.required(
@@ -140,8 +141,6 @@ class _UserLocSectionState extends State<_UserLocSection> {
                           decoration: const InputDecoration(
                             labelText: 'Gender',
                           ),
-                          allowClear: true,
-                          hint: const Text('Select Gender'),
                           items: const [
                             DropdownMenuItem(
                               value: '',
@@ -173,8 +172,6 @@ class _UserLocSectionState extends State<_UserLocSection> {
                           decoration: const InputDecoration(
                             labelText: 'Rol',
                           ),
-                          allowClear: true,
-                          hint: const Text('Select Rol'),
                           items: const [
                             DropdownMenuItem(
                               value: '',
@@ -224,7 +221,6 @@ class _UserLocSectionState extends State<_UserLocSection> {
                 Row(
                   children: <Widget>[
                     MaterialButton(
-                      child: const Text("Save"),
                       onPressed: widget.isSaving
                           ? null
                           : () {
@@ -249,6 +245,7 @@ class _UserLocSectionState extends State<_UserLocSection> {
                                         .value);
                               }
                             },
+                      child: const Text("Save"),
                     ),
                     MaterialButton(
                       child: const Text("Reset"),
@@ -256,7 +253,7 @@ class _UserLocSectionState extends State<_UserLocSection> {
                         _formKey.currentState!.reset();
                       },
                     ),
-                    if (widget.isSaving) CircularProgressIndicator(),
+                    if (widget.isSaving) const CircularProgressIndicator(),
                   ],
                 )
               ],

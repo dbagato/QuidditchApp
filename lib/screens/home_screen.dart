@@ -9,12 +9,15 @@ class HomeScreen extends StatelessWidget {
   static Widget create(BuildContext context) {
     return BlocProvider(
       create: (_) => UserLocCubit(UserLocRepository())..getUserLoc(),
-      child: HomeScreen(),
+      child: const HomeScreen(),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: const NavBarType1(), body: FooterNavBar());
+    return Scaffold(
+      appBar: NavBarType1(),
+      body: const FooterNavBar(),
+    );
   }
 }

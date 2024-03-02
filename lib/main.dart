@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_config/flutter_config.dart';
 import 'package:quadball_manager/services/services.dart';
 import 'package:quadball_manager/router/app_routes.dart';
 import 'package:quadball_manager/theme/app_theme_global.dart';
@@ -13,7 +14,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
+  await FlutterConfig.loadEnvVariables();
   final authCubit = AuthCubit(AuthRepository());
   runApp(
     BlocProvider(
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
               ?.pushNamedAndRemoveUntil(AppRoutes.home, (route) => false);
         }
       },
-      child: MyApp(),
+      child: const MyApp(),
     );
   }
 

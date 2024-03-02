@@ -30,7 +30,7 @@ class DescriptionView extends StatelessWidget {
               child: Text(
                 textView,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).primaryTextTheme.bodyText1,
+                style: Theme.of(context).primaryTextTheme.bodyLarge,
               ),
             ),
           ),

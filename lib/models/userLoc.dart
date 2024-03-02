@@ -11,8 +11,8 @@ class UserLoc extends Equatable {
   final List<dynamic>? positions;
   final List<dynamic>? arbitrageTitles;
 
-  UserLoc(this.id, this.name, this.lastName, this.age, this.gender, this.rol,
-      this.image, this.positions, this.arbitrageTitles);
+  const UserLoc(this.id, this.name, this.lastName, this.age, this.gender,
+      this.rol, this.image, this.positions, this.arbitrageTitles);
 
   @override
   List<Object?> get props => [];

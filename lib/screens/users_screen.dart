@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quadball_manager/models/models.dart';
 import 'package:quadball_manager/services/firebase_provider.dart';
 import 'package:quadball_manager/widgets/widgets.dart';
 
@@ -21,7 +20,7 @@ class UsersScreen extends StatelessWidget {
         // A esta propiedad le damos el future
         future: firebaseProvider.getAllUserLoc(),
         // A esta propiedad le damos los datos iniciales mientras carga el Future
-        initialData: [],
+        initialData: const [],
         // Esta propiedad lo explicamos debajo
         builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
           return ListView(

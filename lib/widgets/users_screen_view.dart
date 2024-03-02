@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:quadball_manager/models/models.dart';
-import 'package:quadball_manager/screens/profile_screen.dart';
 
 class UsersScreenView extends StatelessWidget {
   final UserLoc userLoc;
-  UsersScreenView({Key? key, required this.userLoc}) : super(key: key);
+  const UsersScreenView({Key? key, required this.userLoc}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class UsersScreenView extends StatelessWidget {
     if (image == "") {
       return Image.asset("assets/images/quidditchAppLogo.jpeg");
     } else {
-      return Image.network("${image}");
+      return Image.network("$image");
     }
   }
 }

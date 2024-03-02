@@ -4,7 +4,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:quadball_manager/screens/screens.dart';
 
 class FooterNavBar extends StatefulWidget {
-  FooterNavBar({Key? key}) : super(key: key);
+  const FooterNavBar({Key? key}) : super(key: key);
 
   @override
   State<FooterNavBar> createState() => _BottomNavBarState();
@@ -12,14 +12,14 @@ class FooterNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<FooterNavBar> {
   int _page = 0;
-  GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   final screens = [
-    ProfileScreen(),
+    const ProfileScreen(),
     UsersScreen(),
-    PlayGameScreen(),
-    TestScreen(),
-    SettingsUserScreen()
+    const PlayGameScreen(),
+    const TestScreen(),
+    const SettingsUserScreen()
   ];
 
   @override

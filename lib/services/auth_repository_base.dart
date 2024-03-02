@@ -14,7 +14,6 @@ abstract class AuthRepositoryBase {
   Stream<AuthUser?> get onAuthStateChanged;
   Future<AuthUser?> singIn();
   Future<AuthUser?> singInWithGoogle();
-  Future<AuthUser?> singInWithFacebook();
   Future<AuthUser?> createUserWithEmailPwd(String email, String pwd);
   Future<AuthUser?> singInWithEmailPwd(String email, String pwd);
   Future<void> singOut();

@@ -5,8 +5,8 @@ import 'package:email_validator/email_validator.dart';
 import 'package:quadball_manager/widgets/widgets.dart';
 
 class EmailSigninScreen extends StatefulWidget {
-  EmailSigninScreen({Key? key}) : super(key: key);
-  static Widget create(BuildContext context) => EmailSigninScreen();
+  const EmailSigninScreen({Key? key}) : super(key: key);
+  static Widget create(BuildContext context) => const EmailSigninScreen();
   @override
   State<EmailSigninScreen> createState() => _EmailSigninScreenState();
 }
@@ -24,6 +24,7 @@ class _EmailSigninScreenState extends State<EmailSigninScreen> {
     if (!isValid) {
       return "This email not is valid.";
     }
+    return null;
   }
 
   String? pwdValidator(String? value) {
@@ -62,7 +63,7 @@ class _EmailSigninScreenState extends State<EmailSigninScreen> {
                       labelText: "Email...",
                     ),
                     validator: emailValidator,
-                    style: Theme.of(context).primaryTextTheme.bodyText2,
+                    style: Theme.of(context).primaryTextTheme.bodyMedium,
                   ),
                   const SizedBox(height: 10),
                   TextFormField(
@@ -71,7 +72,7 @@ class _EmailSigninScreenState extends State<EmailSigninScreen> {
                       labelText: "Password...",
                     ),
                     validator: pwdValidator,
-                    style: Theme.of(context).primaryTextTheme.bodyText2,
+                    style: Theme.of(context).primaryTextTheme.bodyMedium,
                   ),
                   const SizedBox(height: 10),
                   Padding(

@@ -28,7 +28,7 @@ class LoginView extends StatelessWidget {
               child: Text(
                 text,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).primaryTextTheme.bodyText1,
+                style: Theme.of(context).primaryTextTheme.bodyLarge,
               ),
             ),
           ),
@@ -45,14 +45,6 @@ class LoginView extends StatelessWidget {
                   colorButton: Colors.red,
                   colorText: Colors.white,
                   onTap: () => context.read<AuthCubit>().singInWithGoogle(),
-                ),
-                const SizedBox(height: 8),
-                ButtonLogin(
-                  textButton: "Sing up using Facebook",
-                  iconButton: Icons.facebook,
-                  colorButton: Colors.blue,
-                  colorText: Colors.white,
-                  onTap: () => context.read<AuthCubit>().singInWithFacebook(),
                 ),
                 const SizedBox(height: 8),
                 ButtonLogin(

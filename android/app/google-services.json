@@ -1,48 +1,25 @@
 {
-  "project_info": {
-    "project_number": "655009320556",
-    "project_id": "quadballmanager",
-    "storage_bucket": "quadballmanager.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:655009320556:android:42337a2e199f8a82805249",
-        "android_client_info": {
-          "package_name": "com.dieseg.quadball_manager"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAzpB-mMPEKAI7iF86yIlJJqFLmR5nDiRs"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
+    "project_info": {
+        "project_number": "655009320556",
+        "project_id": "quadballmanager",
+        "storage_bucket": "quadballmanager.appspot.com"
     },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:655009320556:android:9f4794ce7803c6db805249",
-        "android_client_info": {
-          "package_name": "com.dieseg.quidditch_app"
+    "client": [{
+        "client_info": {
+            "mobilesdk_app_id": "1:655009320556:android:42337a2e199f8a82805249",
+            "android_client_info": {
+                "package_name": "com.dieseg.quadball_manager"
+            }
+        },
+        "oauth_client": [],
+        "api_key": [{
+            "current_key": "AIzaSyAzpB-mMPEKAI7iF86yIlJJqFLmR5nDiRs"
+        }],
+        "services": {
+            "appinvite_service": {
+                "other_platform_oauth_client": []
+            }
         }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAzpB-mMPEKAI7iF86yIlJJqFLmR5nDiRs"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    }
-  ],
-  "configuration_version": "1"
+    }],
+    "configuration_version": "1"
 }

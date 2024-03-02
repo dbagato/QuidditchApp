@@ -23,8 +23,8 @@ class FirebaseProvider {
   }
 
   Future<List<UserLoc>> getAllUserLoc() async {
-    final users = await firestore.collection('users/').snapshots().map(
-        (snapshot) => snapshot.docs
+    final users = firestore.collection('users/').snapshots().map((snapshot) =>
+        snapshot.docs
             .map((doc) => UserLoc.fromFirebaseMap(doc.data()))
             .toList());
     return users.elementAt(0);

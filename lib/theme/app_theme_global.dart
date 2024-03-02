@@ -9,9 +9,9 @@ class AppThemeGlobal {
     //color primario
     primaryColor: primaryColor,
     primaryTextTheme: const TextTheme(
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
           fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.black),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
           fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.black),
     ),
     //Appbar
@@ -21,7 +21,7 @@ class AppThemeGlobal {
     ),
     //button style
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(primary: primaryColor),
+      style: TextButton.styleFrom(foregroundColor: primaryColor),
     ),
   );
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
@@ -35,12 +35,12 @@ class AppThemeGlobal {
     ),
     //button style
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(primary: primaryColor),
+      style: TextButton.styleFrom(foregroundColor: primaryColor),
     ),
     primaryTextTheme: const TextTheme(
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
           fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
           fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.white),
     ),
   );
